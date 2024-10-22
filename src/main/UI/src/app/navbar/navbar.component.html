@@ -1,0 +1,16 @@
+<div class="parent">
+  <div class="primary-nav">
+    <h1 class="h1">PAWSOME</h1>
+  </div>
+  <div class="secondary-nav">
+    <ul class="unordered-list">
+      <li class="list-item" (click)="goToHome()">Home</li>
+      <li *ngIf="!isAuthenticated" class="list-item" (click)="goToRegister()">Register</li>
+      <li *ngIf="!isAuthenticated" class="list-item" (click)="goToLogin()">Login</li>
+      <li *ngIf="isAuthenticated" class="list-item" (click)="goToDashboard()">Dashboard</li>
+      <li *ngIf="isAuthenticated" class="list-item" (click)="goToPets()">Pets</li>
+      <li *ngIf="isAuthenticated" class="list-item" (click)="goToReports()">Reports</li>
+      <li *ngIf="isAuthenticated" class="list-item" (click)="logout()">Logout</li>
+    </ul>
+  </div>
+</div>

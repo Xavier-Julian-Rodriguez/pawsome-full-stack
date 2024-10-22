@@ -1,0 +1,56 @@
+<div class="report-parent">
+  <h2 class="h2">Reports</h2>
+  <div class="user-activity-parent">
+    <h3 class="h3">User Activity Report</h3>
+    <div class="button-container">
+      <button class="button" (click)="loadUserActivityReport()">Load User Activity Report</button>
+    </div>
+    <table *ngIf="userActivityReport">
+      <caption>Report Created: {{currentDateTime}}</caption>
+      <thead>
+      <tr>
+        <th colspan="1">User ID</th>
+        <th colspan="1">First Name</th>
+        <th colspan="1">Last Name</th>
+        <th colspan="1">Number of Pets</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let report of userActivityReport">
+        <td colspan="1">{{ report[0] }}</td>
+        <td colspan="1">{{ report[1] }}</td>
+        <td colspan="1">{{ report[2] }}</td>
+        <td colspan="1">{{ report[3] }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+<!--  second report starts here-->
+  <div class="pet-ranking-recipe-parent">
+    <h3 class="h3">Pets With Most Recipes Report</h3>
+    <div class="button-container">
+      <button class="button" (click)="loadPetsWithMostRecipesReport()">Load Pets With Most Recipes Report</button>
+    </div>
+    <table *ngIf="petsWithMostRecipesReport">
+      <caption>Report Created: {{currentDateTimeTwo}}</caption>
+      <thead>
+      <tr>
+        <th colspan="1">Pet ID</th>
+        <th colspan="1">Pet Name</th>
+        <th colspan="1">Pet Species</th>
+        <th colspan="1">Pet Age</th>
+        <th colspan="1">Number of Recipes</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let reportTwo of petsWithMostRecipesReport">
+        <td colspan="1">{{ reportTwo[0] }}</td>
+        <td colspan="1">{{ reportTwo[1] }}</td>
+        <td colspan="1">{{ reportTwo[2] }}</td>
+        <td colspan="1">{{ reportTwo[3] }}</td>
+        <td colspan="1">{{ reportTwo[4] }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

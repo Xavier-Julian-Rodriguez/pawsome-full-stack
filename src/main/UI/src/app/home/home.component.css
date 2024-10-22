@@ -1,0 +1,26 @@
+.hero-container {
+  background-image: url("/pawsome-hero.webp");
+}
+.h2 {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 1%;
+  margin-bottom: 0;
+}
+.h3 {
+  width: 50%;
+  margin-top: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+a {
+  padding-left: 10%;
+  text-decoration: none;
+
+}
+
+@media screen and (max-width: 500px) {
+  .h3 {
+    width: 80%;
+  }
+}

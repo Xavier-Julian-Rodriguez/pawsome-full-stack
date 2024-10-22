@@ -1,0 +1,33 @@
+<div class="hero-container">
+  <div class="overlay"></div>
+  <h2 class="h2">Create an Account</h2>
+  <form (ngSubmit)="registerUser()" #registrationForm="ngForm">
+    <div class="input-div">
+      <input type="text" id="firstName" [(ngModel)]="user.firstName" name="firstName" placeholder="First Name" required minlength="2" maxlength="12" #firstName="ngModel">
+      <div *ngIf="firstName.invalid" class="error">
+        <div *ngIf="firstName.errors?.['minlength']">First Name must be between 2 - 12 characters long.</div>
+      </div>
+    </div>
+    <div class="input-div">
+      <input type="text" id="lastName" [(ngModel)]="user.lastName" name="lastName" placeholder="Last Name" required minlength="2" maxlength="12" #lastName="ngModel">
+      <div *ngIf="lastName.invalid" class="error">
+        <div *ngIf="lastName.errors?.['minlength'] || lastName.errors?.['maxlength']">Last Name must be between 2 - 12 characters long.</div>
+      </div>
+    </div>
+    <div class="input-div">
+      <input type="text" id="username" [(ngModel)]="user.username" name="username" placeholder="Username" required minlength="8" maxlength="18" #userNameInput="ngModel">
+      <div *ngIf="userNameInput.invalid" class="error">
+        <div *ngIf="userNameInput.errors?.['minlength'] || userNameInput.errors?.['maxlength']">Username must be between 8 - 18 characters long.</div>
+      </div>
+    </div>
+    <div class="input-div">
+      <input type="password" id="password" [(ngModel)]="user.password" name="password" placeholder="Password" required minlength="6" #password="ngModel">
+      <div class="error" *ngIf="password.invalid">
+        <div *ngIf="password.errors?.['minlength']">Password must be more than 6 characters long.</div>
+      </div>
+    </div>
+    <button type="submit" class="button" [disabled]="registrationForm.invalid">Create</button>
+  </form>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+</div>

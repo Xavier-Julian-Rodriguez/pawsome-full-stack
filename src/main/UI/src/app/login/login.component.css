@@ -1,0 +1,12 @@
+.hero-container {
+  background-image: url("/pawsome-hero.webp");
+}
+h2{
+  margin: 0 auto;
+  z-index: 999;
+  padding-bottom: 2%;
+  text-align: center;
+}
+.button {
+  margin: 2% auto;
+}

@@ -1,0 +1,137 @@
+html {
+  background-color: #ffffff;
+}
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  max-width: 1500px;
+}
+.zain-extralight {
+  font-family: "Zain", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.zain-light {
+  font-family: "Zain", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.zain-regular {
+  font-family: "Zain", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zain-bold {
+  font-family: "Zain", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.zain-extrabold {
+  font-family: "Zain", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.zain-black {
+  font-family: "Zain", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+ul, ol, li, p, button, a, input, span, h1, h2, h3, h4, h5, h6, label {
+  font-family: "Zain", sans-serif;
+}
+.hero-container {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1%;
+  position: relative;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 60%;
+  position: absolute;
+  z-index: 997;
+  background-color: #000000;
+}
+.h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  z-index: 998;
+}
+.h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  z-index: 999;
+}
+.button, a {
+  z-index: 999;
+}
+.button {
+  border: solid 1px #000000;
+  background-color: #2196f3;
+  border-radius: 12px;
+  padding: 2%;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  width: 100px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button, a {
+  z-index: 999;
+}
+.button:hover {
+  background-color: #000000;
+  color: #2196f3;
+  cursor: pointer;
+}
+form, input {
+  margin: 0 auto;
+  z-index: 999;
+}
+form {
+  width: 33vw;
+  text-align: center;
+  border: solid 1px #000000;
+  border-radius: 12px;
+  background-color: #ffb74d;
+  padding-top: 2%;
+}
+
+.input-div {
+  width: 90%;
+  margin: 0 auto;
+}
+input {
+  width: 90%;
+  font-size: 1rem;
+  padding: 2%;
+}
+.error {
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 1rem;
+  z-index: 999;
+}
+@media screen and (max-width: 500px) {
+  form {
+    width: 80%;
+  }
+}
+

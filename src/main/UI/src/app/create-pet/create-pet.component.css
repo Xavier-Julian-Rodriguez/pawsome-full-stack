@@ -1,0 +1,120 @@
+.image-container {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.pet-image {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.hero-container {
+  background-image: url("/pawsome-woman-cat.webp");
+  min-height: 50vh;
+  width: 100%;
+}
+.parent {
+  text-align: center;
+  width: 90%;
+  padding: 5%;
+  background-color: #2196f3;
+}
+.parent > .row-flex > form {
+  padding-top: 2%;
+}
+.h2 {
+  color: #000000;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 0;
+}
+.paragraph {
+  font-size: 2rem;
+  margin-top: 1%;
+}
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.column-flex {
+  width: 40%;
+}
+.form {
+  width: 40%;
+}
+.button {
+  margin: 0 auto;
+}
+.pets-container {
+  width: 100%;
+}
+.pets-container > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+.petsFlex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0 0 3% 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pet-card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 2%;
+  margin: 1%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
+}
+ul {
+  list-style: none;
+}
+form {
+  width: 25vw;
+  padding-top: 0;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 5%;
+}
+.input-div {
+  width: 90%;
+}
+
+@media screen and (max-width: 500px) {
+  .pets-container > ul {
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    width: 85%;
+  }
+  .pet-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+  form {
+    width: 80vw;
+    padding-top: 0;
+  }
+  .row-flex {
+    flex-direction: column;
+  }
+  .column-flex {
+    width: 90%;
+  }
+  .row-flex > form {
+    width: 80vw;
+  }
+}

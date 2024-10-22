@@ -1,0 +1,35 @@
+.report-parent {
+  width: 80%;
+  padding: 5% 10%;
+}
+.pet-ranking-recipe-parent {
+  padding-top: 5%;
+}
+.h2, h3 {
+  color: #000000
+}
+.h2 {
+  margin-bottom: 0;
+}
+.h3 {
+  margin-top: 0;
+}
+
+table {
+  text-align: center;
+  border: solid 1px #000000;
+  font-family: "Zain", sans-serif;
+}
+.button {
+  width: auto;
+  margin-bottom: 5%;
+}
+tr, tbody, thead {
+  width: 100%;
+}
+td,th {
+  width: 25%;
+}
+td, tr, th {
+  border: solid 1px #000000;
+}

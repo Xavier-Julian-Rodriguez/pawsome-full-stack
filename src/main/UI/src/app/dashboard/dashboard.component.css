@@ -1,0 +1,37 @@
+#update-user-form {
+  display: none;
+}
+#cancel-update-user-button {
+  display: none;
+}
+.hero-container {
+  background-image: url("/pawsome-man-husky.webp");
+  min-height: 50vh;
+}
+h2{
+  margin: 0 auto;
+  z-index: 999;
+  padding-bottom: 2%;
+  text-align: center;
+  color: #000000;
+}
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  row-gap: 1rem;
+  padding-bottom: 5%;
+}
+.button-container {
+  z-index: 999;
+  margin: 0 auto;
+
+}
+.button {
+  margin: 2% auto;
+}
+
+@media screen and (max-width: 500px) {
+
+}

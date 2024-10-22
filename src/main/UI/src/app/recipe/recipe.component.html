@@ -1,0 +1,44 @@
+<div class="content">
+  <div class="hero-container"></div>
+  <div class="search-container">
+    <h2 class="h2" *ngIf="pet">Search Recipes</h2>
+    <div class="input-div">
+      <input type="text" id="search" [(ngModel)]="keyword" name="search" placeholder="chicken"  required>
+    </div>
+    <div class="search-button-container">
+      <button class="button search-button" type="submit" (click)="searchByKeyword(keyword, petId)">Go</button>
+    </div>
+    <ul class="recipe-cards">
+      <li *ngFor="let recipe of recipesList" class="recipe-card">
+        <h3 [innerHTML]="recipe.title"></h3>
+        <div [innerHTML]="recipe.ingredients"></div>
+        <div [innerHTML]="recipe.instructions"></div>
+        <button class="button" type="submit" (click)="deleteRecipe(recipe.id)">Delete Recipe</button>
+      </li>
+    </ul>
+  </div>
+<div *ngIf="pet" class="recipe-parent">
+  <h2 class="h2">{{recipes.length == 0 ? pet.name + " doesn't have any saved recipes. Use the form below to generate one today!" : pet.name + "'s Recipes:"}}</h2>
+  <ul class="recipe-cards">
+    <li *ngFor="let recipe of recipes" class="recipe-card">
+      <h3 [innerHTML]="recipe.title"></h3>
+      <div [innerHTML]="recipe.ingredients"></div>
+      <div [innerHTML]="recipe.instructions"></div>
+      <button class="button" type="submit" (click)="deleteRecipe(recipe.id)">Delete Recipe</button>
+    </li>
+  </ul>
+</div>
+<div class="container-two">
+  <h2 class="h2" *ngIf="pet">Generate a Recipe For {{pet.name}}!</h2>
+  <div class="input-div">
+    <label for="ingredients">Ingredients:</label>
+    <input type="text" id="ingredients" [(ngModel)]="ingredients" name="ingredients" placeholder="Chicken, sweet potato, etc"  required>
+  </div>
+  <button class="button" type="submit" (click)="generateRecipe()">Go</button>
+</div>
+<div class="container">
+  <div [innerHTML]="content"></div>
+  <div *ngIf="content && pet"><button class="button" type="submit" (click)=createRecipe()>Save Recipe For {{pet.name}}</button> </div>
+  <div *ngIf="successMessage" class="alert alert-success mt-3 successMessage">{{ successMessage }}</div>
+</div>
+</div>

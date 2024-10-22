@@ -1,0 +1,36 @@
+.parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.primary-nav{
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: #eeeeee;
+}
+.h1 {
+  font-size: 3rem;
+}
+.secondary-nav {
+  width: 100%;
+  background-color: #ffb74d;
+  border: solid 1px #000000;
+}
+.unordered-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: center;
+}
+.list-item {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.list-item:hover {
+  cursor: pointer;
+  opacity: 50%;
+}

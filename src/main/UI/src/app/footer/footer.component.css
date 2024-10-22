@@ -1,0 +1,19 @@
+.footer-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: solid 1px #000000;
+}
+.footer-paragraph-one, .footer-paragraph-two {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.footer-paragraph-one {
+  margin-bottom: 0;
+  padding-bottom: .5%;
+}
+.footer-paragraph-two {
+  margin-top: 0;
+}

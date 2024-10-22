@@ -1,0 +1,37 @@
+<div class="hero-container">
+</div>
+  <div class="column-flex">
+    <h2 class="h2">Dashboard</h2>
+    <div class="button-container">
+      <button class="button" (click)="NavigateToCreatePetPage()">Create a Pet Profile</button>
+    </div>
+    <div class="button-container">
+      <button class="button" (click)="showUpdateUserForm()" id="update-user-button">Update User Details</button>
+    </div>
+    <div class="button-container">
+      <button class="button" (click)="hideUpdateUserForm()" id="cancel-update-user-button">Cancel</button>
+    </div>
+  <form (ngSubmit)="UpdateUser(user_id, userForm.value)" #userForm="ngForm" id="update-user-form">
+    <div class="input-div">
+      <input type="text" [(ngModel)]="firstName" name="firstName" id="first_name" placeholder="First Name">
+    </div>
+    <div class="input-div">
+      <input type="text" [(ngModel)]="lastName" name="lastName" id="last_name" placeholder="Last Name">
+    </div>
+    <div class="input-div">
+      <input type="text" [(ngModel)]="new_username" name="username" id="username" placeholder="Username">
+    </div>
+    <div class="input-div">
+      <input type="text" [(ngModel)]="new_password" name="password" id="password" placeholder="password">
+    </div>
+    <div class="button-container">
+      <button class="button" type="submit">Save</button>
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+  </form>
+    <div class="button-container">
+      <button class="button" (click)="DeleteUser()">Delete My Account</button>
+    </div>
+  </div>
+

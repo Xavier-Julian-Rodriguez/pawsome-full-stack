@@ -1,0 +1,63 @@
+<div class="hero-container">
+</div>
+<h2 class="h2">My Pets</h2>
+<div class="pets-container">
+  <ul>
+    <li *ngFor="let pet of pets" class="pet-card">
+      <form (ngSubmit)="updatePet(pet.id, petForm.value)" #petForm="ngForm" id="update-form" class="petsFlex">
+        <div class="image-container">
+          <img class="pet-image" [src]="'data:image/jpeg;base64,' + pet.imageBase64" alt="{{ pet.name }}" *ngIf="pet.imageBase64">
+        </div>
+        <div class="input-div">
+          <input type="text" [(ngModel)]="pet.name" name="name" required>
+        </div>
+        <div class="input-div">
+          <input type="number" [(ngModel)]="pet.age" name="age" required>
+        </div>
+        <div class="input-div">
+          <input type="text" [(ngModel)]="pet.species" name="species" required>
+        </div>
+        <div class="buttons-container">
+          <button class="button" type="submit">Update Pet</button>
+          <button class="button" (click)="deletePet(pet.id)" type="submit">Delete Pet</button>
+          <button class="button" (click)="navigateToRecipePage(pet.id)">View {{ pet.name }}'s Recipes</button>
+        </div>
+        <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+        <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+      </form>
+    </li>
+  </ul>
+</div>
+<div class="parent">
+  <div class="row-flex">
+    <div class="column-flex">
+      <h2 class="h2">Add a Pet Profile</h2>
+      <p class="paragraph">Enter your pet details and upload their profile photo to begin saving recipes.</p>
+    </div>
+    <form (ngSubmit)="createPet()" class="form" #createPetForm="ngForm">
+      <div class="input-div">
+        <input type="text" id="name" [(ngModel)]="name" name="name" placeholder="Pet Name" required minlength="2" maxlength="12" #petName="ngModel">
+        <div class="error">
+          <div *ngIf="petName.errors?.['minlength']">Pet name must be between 2 - 12 characters long.</div>
+        </div>
+      </div>
+      <div class="input-div age-container">
+        <label for="age">Pet Age:</label>
+        <input type="number" id="age" [(ngModel)]="age" name="age" placeholder="Pet Age" required [min]="0.1" max="99" #petAge="ngModel">
+        <div class="error">
+          <div *ngIf="petAge.errors?.['min'] || petAge.errors?.['max']">Pet age must be between 0.1 and 99 years old.</div>
+        </div>
+      </div>
+      <div class="input-div">
+        <input type="text" id="species" [(ngModel)]="species" name="species" placeholder="Species (i.e. Dog, Cat, Bird, etc)" required>
+      </div>
+      <div class="input-div">
+        <label for="image">Pet Image (in JPEG format):</label>
+        <input type="file" id="image" (change)="onFileChange($event)" accept="image/*">
+      </div>
+      <button class="button" type="submit" [disabled]="createPetForm.invalid">Create Pet</button>
+    </form>
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+  </div>
+</div>
