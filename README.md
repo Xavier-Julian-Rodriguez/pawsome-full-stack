@@ -1,6 +1,5 @@
 # Pawsome
 ## Xavier Rodriguez
-### WGU D424 Software Engineering Capstone Project
 To view the production application, visit: http://pawsome-frontend-bucket.s3-website.us-east-2.amazonaws.com/
 ## Description
 Make your pet happy and build a deeper bond with them by using our custom homemade pet treat recipes to make pet snacks. Create a user account, pet profiles, and begin generating custom ingredient treat recipes for your pet.
